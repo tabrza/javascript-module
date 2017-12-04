@@ -1,4 +1,4 @@
-
+var Note = require("./noteModel.js").note;
   var assert = {
     isTrue: function(describe, assertionToCheck){
       if (!assertionToCheck){
