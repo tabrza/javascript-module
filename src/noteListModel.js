@@ -5,10 +5,16 @@
   }
 
   NoteList.prototype.addNote = function(string){
-    var note = new Note(string);
+    var note = new Note(string)
     this.notes.push(note)
   }
 
+  NoteList.prototype.allNotes = function(){
+    notes = this.notes;
+    for(var i = 0; i < notes.length; i++){
+      return notes[i];
+    }
+  }
 
   exports.NoteList = NoteList;
 })(this);
