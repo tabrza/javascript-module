@@ -1,10 +1,10 @@
 function returnNoteListView() {
   var noteList = new NoteList();
-  var note = new Note('Marco');
+  var note = new Note();
   var noteListView = new NoteListView();
 
-  noteList.addNote(note);
-  noteList.addNote(note);
+  noteList.addNote('Marco');
+  noteList.addNote('marco2');
   var allNotes = noteList.allNotes()
   console.log(allNotes + "OVER HEEERE")
   var renderedNotes = noteListView.renderHtml(allNotes)
