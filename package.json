@@ -1,0 +1,23 @@
+{
+  "name": "javascript-module",
+  "version": "1.0.0",
+  "description": "makers",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tabrza/javascript-module.git"
+  },
+  "author": "tab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tabrza/javascript-module/issues"
+  },
+  "homepage": "https://github.com/tabrza/javascript-module#readme"
+}
