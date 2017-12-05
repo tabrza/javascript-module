@@ -5,12 +5,11 @@
   }
 
   NoteListView.prototype.renderHtml = function(notes) {
-    for(var i = 0; i < notes.length; i++)
-    return "<li><div> " + notes[i].text.text + " </div></li>"
-
-    console.log("<li><div>" + notes[i].text.text + "</div></li>")
-    console.log(notes[0].text.text)
-
+    var list = []
+    for(var i = 0; i < notes.length; i++){
+      list.push("<li><div> " + notes[i].text + " </div></li>")
+    }
+    return list.join(' ')
   };
 
   exports.NoteListView = NoteListView;
