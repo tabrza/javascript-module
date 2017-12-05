@@ -21,5 +21,13 @@ var assert = {
     } else {
       throw new Error("assertion failed: " + val + "is not an instance of " + objectType);
     }
+  },
+
+  isEqual: function(describe, val1, val2){
+    if(val1 === val2){
+      console.log(describe)
+    } else {
+      throw new Error("assertion failed: " + val1 + "does not equal " + val2);
+    }
   }
 };
