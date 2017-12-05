@@ -14,7 +14,7 @@
     // for(var i = 0; i < notes.length; i++){
     //   return notes[i];
     // }
-    return notes
+    return notes;
   }
 
   exports.NoteList = NoteList;
