@@ -15,7 +15,6 @@ function returnAllNotesTest(){
   var noteList = new NoteList();
   var describe = 'returns note list'
   noteList.addNote('test')
-  console.log(noteList.allNotes().text)
   assert.isEqual(noteList.allNotes().text === 'test')
 }
 
