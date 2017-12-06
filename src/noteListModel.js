@@ -10,11 +10,7 @@
   }
 
   NoteList.prototype.allNotes = function(){
-    notes = this.notes;
-    // for(var i = 0; i < notes.length; i++){
-    //   return notes[i];
-    // }
-    return notes;
+    return this.notes;
   }
 
   exports.NoteList = NoteList;
