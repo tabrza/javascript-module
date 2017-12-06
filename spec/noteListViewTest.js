@@ -19,11 +19,12 @@ function returnNoteListView() {
     }
   }
 
-  var noteListView = new NoteListView();
   var noteListDouble = new NoteListDouble();
   noteListDouble.addNote('Marco');
   var allNotes = noteListDouble.allNotes();
-  var renderedNotes = noteListView.renderHtml(allNotes)
+  console.log('ALL NOTES', allNotes)
+  var noteListView = new NoteListView(allNotes);
+  var renderedNotes = noteListView.renderHtml()
   var renderedTestNote = "<li><div> Marco </div></li>"
   var describe = "The note is rendered in HTML"
   assert.isEqual(describe, renderedNotes, renderedTestNote)
