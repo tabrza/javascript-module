@@ -1,18 +1,21 @@
-function changeWord(){
-  var jungle = document.getElementById('app');
-  jungle.innerHTML = 'howdy' ;
-}
-changeWord();
+(function(exports){
 
+  function NoteController(noteList){
+    this.noteList = noteList;
+  }
 
+  NoteController.prototype.changeWord = function() {
+    var jungle = document.getElementById('app');
+    jungle.innerHTML = 'howdy' ;
 
+  };
 
-note = new Note();
-noteList = new NoteList();
-noteListView = new NoteListView();
-noteList.addNote('marco');
-noteList.addNote('marco2');
-noteList.addNote('marco3');
-// console.log(noteList.allNotes())
-var jungle = document.getElementById('list');
-jungle.innerHTML = noteListView.renderHtml(noteList.allNotes());
+  NoteController.prototype.printList = function(){
+    var noteListView = new NoteListView(this.noteList);
+    var render = noteListView.renderHtml()
+    var oops = document.getElementById('list');
+    oops.innerHTML =  render;
+  }
+
+  exports.NoteController = NoteController;
+})(this);
