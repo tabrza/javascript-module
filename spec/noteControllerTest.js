@@ -1,5 +1,3 @@
-window.onload = function(){
-
   function pageContainsList(){
     function NoteListDouble(){
       this.notes= []
@@ -27,9 +25,7 @@ window.onload = function(){
     var noteListView = new NoteListView(allNotes);
     var render = noteListView.renderHtml();
     noteController.printList()
-    assert.isEqual("list item produced on page", document.getElementById('list').innerHTML, "<li><div> Marco </div></li>");
+    assert.isEqual("list item produced on page", document.getElementById('list').innerHTML, "<ul><li><div> Marco </div></li></ul>");
   }
 
   pageContainsList();
-
-}
