@@ -1,5 +1,3 @@
-function returnNoteListView() {
-
   function NoteListDouble(){
     this.notes= []
   };
@@ -22,12 +20,26 @@ function returnNoteListView() {
   var noteListDouble = new NoteListDouble();
   noteListDouble.addNote('Marco');
   var allNotes = noteListDouble.allNotes();
-  console.log('ALL NOTES', allNotes)
   var noteListView = new NoteListView(allNotes);
-  var renderedNotes = noteListView.renderHtml()
-  var renderedTestNote = "<li><div> Marco </div></li>"
-  var describe = "The note is rendered in HTML"
-  assert.isEqual(describe, renderedNotes, renderedTestNote)
 
-}
+
+  function returnNoteListView(){
+    var renderedNotes = noteListView.renderHtml()
+    var renderedTestNote = "<ul><li><div> Marco </div></li></ul>"
+    var describe = "The note is rendered in HTML"
+    assert.isEqual(describe, renderedNotes, renderedTestNote)
+  }
+
+  function returnNoteListLength20(){
+    var noteListDouble = new NoteListDouble();
+    noteListDouble.addNote('1235678901234567890extra');
+    var allNotes = noteListDouble.allNotes();
+    var noteListView = new NoteListView(allNotes);
+    var renderedNotes = noteListView.renderHtml()
+    var renderedTestNote = "<ul><li><div> 1235678901234567890 </div></li></ul>"
+    var describe = "The note is rendered in HTML"
+    assert.isEqual(describe, renderedNotes, renderedTestNote)
+  }
+
 returnNoteListView();
+returnNoteListLength20()
