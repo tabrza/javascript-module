@@ -1,5 +1,3 @@
-function viewingSingleNote(){
-
   function NoteListDouble(){
     this.notes= []
   };
@@ -18,12 +16,15 @@ function viewingSingleNote(){
     }
   }
 
-  var noteDouble = new NoteDouble('hello')
-  var singleNote = new SingleNote(noteDouble)
-  singleNote.printSingleNote();
-  console.log("printnote", singleNote.printSingleNote())
-  console.log("html",document.getElementById('singleItem').innerHTML)
-  assert.isEqual("prints single note",  document.getElementById('singleItem').innerHTML, "<div>hello</div>")
-}
+
+  function viewingSingleNote(){
+    var noteDouble = new NoteDouble('hello')
+    var singleNote = new SingleNote(noteDouble)
+    singleNote.printSingleNote();
+    assert.isEqual("prints single note",  document.getElementById('singleItem').innerHTML, "<div>hello</div>")
+  }
+
+ 
+
 
 viewingSingleNote();
