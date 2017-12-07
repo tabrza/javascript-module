@@ -18,6 +18,15 @@ function returnAllNotesTest(){
   assert.isEqual(noteList.allNotes().text === 'test')
 }
 
+function incrementsIdTest(){
+  var noteList = new NoteList();
+  var describe = 'returns id of 0'
+  noteList.addNote('test')
+  noteList.addNote('test')
+  assert.isEqual(describe, noteList.notes[0].id, 0)
+}
+
 NoteListModelTest();
 addNoteTest();
 returnAllNotesTest();
+incrementsIdTest();
