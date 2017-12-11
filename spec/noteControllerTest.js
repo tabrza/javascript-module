@@ -28,19 +28,15 @@ NoteListDouble.prototype = {
 
     var allNotes = noteListDouble.allNotes();
     var noteListView = new NoteListView(noteListDouble.notes);
-    console.log('HERERE',noteListDouble.notes);
 
     var noteController = new NoteController(noteListDouble);
     var render = noteListView.renderHtml();
 
-    console.log("NOTECONTROLLER",noteController.noteList.notes)
     noteController.printList();
 
-    console.log("what happens?",noteController.printlist())
-
-    var callback = noteController.moo;
-    // console.log(callback)
-    window.addEventListener("hashchange", callback);
+    window.addEventListener("hashchange", function() {
+      noteController.moo();
+    });
 
   }
 
